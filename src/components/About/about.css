@@ -1,0 +1,20 @@
+/* About section */
+#title{
+    font-family:'Roboto', sans-serif ;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+.contact-title{ font-weight: 600; margin-bottom: 0.75rem; }
+
+.contact-item{ margin: 0.5rem 0; }
+.contact-link{ text-decoration: none; color: inherit; }
+.contact-link:hover{ color: #007bff; cursor: pointer; }
+
+h2{ font-family:'Roboto', sans-serif ; font-weight: bold; margin: 0 0 1rem 0; }
+
+@media (max-width: 768px){
+  #title, h2{ text-align: center; }
+  .contact-column{ text-align: center; }
+  .contact-item{ justify-content: center; }
+}

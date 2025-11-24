@@ -1,0 +1,24 @@
+/* Responsive project card rules */
+.projects-grid{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.projects-grid .MuiCard-root{
+	flex: 1 1 300px;
+	max-width: 100%;
+}
+.projects-grid img, .projects-grid .MuiCardMedia-root{
+	width: 100%;
+	height: auto !important;
+	object-fit: contain;
+}
+
+@media (max-width: 576px){
+	.projects-grid .MuiCard-root{ flex-basis: 100%; }
+}
+p{
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}

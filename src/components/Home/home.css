@@ -1,0 +1,75 @@
+h2{
+    font-weight: bold;
+    font-family:'Roboto', sans-serif ;
+}
+h2{
+    font-family:'Roboto', sans-serif ;
+}
+
+/* Ensure profile image scales on small screens */
+.homeprofile{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem auto;
+}
+
+@media (max-width: 576px) {
+    h2{ font-size: 1.25rem; text-align: center; }
+    p{ font-size: 0.95rem; text-align: center; }
+}
+
+/* Buttons sizing inside home */
+.home-buttons .MuiButton-root{
+    padding: 0.45rem 1rem;
+    font-size: 0.95rem;
+    min-width: 120px;
+}
+
+@media (max-width: 576px){
+    .home-buttons{ flex-direction: column; gap: 0.75rem; justify-content: center; align-items: center; }
+    .home-buttons .MuiButton-root{ width: 100%; min-width: auto; }
+}
+
+/* Ensure even gap around columns and balanced spacing */
+.home-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.home-row{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-row > .col-12 {
+  display: flex;
+  align-items: center;
+}
+
+.home-row > .col-12:first-child {
+  justify-content: flex-start;
+}
+
+.home-row > .col-12:last-child {
+  justify-content: center;
+}
+
+@media (max-width: 768px){
+  .home-section{ 
+    min-height: auto;
+    padding: 1rem 0.5rem;
+  }
+  .home-row > .col-12 {
+    justify-content: center;
+    text-align: center;
+  }
+  .home-row > .col-12:first-child {
+    justify-content: center;
+  }
+}
