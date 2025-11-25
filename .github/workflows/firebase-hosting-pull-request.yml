@@ -19,14 +19,3 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HARI_WEBDEV_PORTFOLIO }}
           projectId: hari-webdev-portfolio
- - name: Set up Node.js
-  uses: actions/setup-node@v4
-  with:
-    node-version: '20.19.0'
-
-- name: Install dependencies
-  run: npm ci   # or npm install if you don’t use package-lock.json
-
-- name: Run tests
-  run: npm run test
-
