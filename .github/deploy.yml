@@ -10,6 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install dependencies
+  run: |
+    cd Hari-webDev-Portfolio
+    npm install
+
+    - name: Build project
+    run: |
+    cd Hari-webDev-Portfolio
+    npm run build
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
