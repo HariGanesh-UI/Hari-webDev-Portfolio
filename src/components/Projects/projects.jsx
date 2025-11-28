@@ -1,44 +1,43 @@
-import { Element } from "react-scroll";
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
-import "./projects.css";
+
 
 export function Projects(){
     return(
-        <section className="container-fluid" id="projects">
-            <h2 className="text-centre title1">Projects</h2>
-            <div className="d-flex flex-wrap gap-4 m-4 p-4">
-                <Card sx={{ maxWidth: 350, height: 380, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', textAlign: 'center' }}>
-                    <CardMedia component="img" image="/images/shopkart.png" alt="Project 1" sx={{ height: 180, objectFit: 'cover', width: '100%' }}/>
-                    <CardContent sx={{ flexGrow: 1 }}>
-                        <Typography variant="body1" gutterBottom>
-                            ShopKart - E-commerce Website
+        <section   id="projects">
+            <div id="head1">Projects</div>
+            <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4 p-4">
+                <Card sx={{textAlign:"center", width:{sm:'120px', lg:'440px'}, height:{sm:'140px',lg:'500px'},borderRadius:'10px', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                    <CardMedia sx={{ height: 240, width: 440, objectFit:'contain'}} image="/public/images/shopkart.png" />
+                    <CardContent>
+                        <Typography>
+                            SopKart - E commerce
                         </Typography>
-                        <Typography variant="caption">
-                            Developed a full-stack e-commerce web application using MERN stack, featuring user authentication, product management, shopping cart, and order processing functionalities.
-                        </Typography>
-                    </CardContent>
-                        <CardActions>
-                            <Button size="small" variant="contained" href="https://github.com/HariGanesh-UI/ShopKart-web-app" target="_blank">
-                            View Code
-                            </Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 350, height: 380, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', textAlign: 'center' }}>
-                    <CardMedia component="img" image="/images/todo.png" alt="Project 1" sx={{ height: 180, objectFit: 'cover', width: '100%' }}/>
-                    <CardContent sx={{ flexGrow: 1 }}>
-                        <Typography variant="body1" gutterBottom>
-                            To-do List Application
-                        </Typography>
-                        <Typography variant="caption">
-                            Created a responsive to-do list application using React for the front-end and Node.js with Express for the back-end, allowing users to manage tasks with CRUD operations and persistent storage in MongoDB.
+                        <Typography>
+                            Technologies Used:Mustache js, js, Node.js, Express.js, MongoDB, Bootstrap
+                            Developed a full-stack e-commerce web application with user authentication, product management, shopping cart, and order processing functionalities.
                         </Typography>
                     </CardContent>
-                        <CardActions>
-                            <Button size="small" variant="contained" href="https://github.com/HariGanesh-UI/React-Typescript-to-do-app" target="_blank">
-                                View Code
-                            </Button>
-                        </CardActions>
-                    </Card>
+                    <CardActions sx={{justifyContent:'center', gap:2}}>
+                        <Button size="small" href="https://github.com/HariGanesh-UI/ShopKart-web-app" target="_blank" rel="noopener noreferrer" variant="contained">View Project Repo</Button>
+                        <Button size="small" href="#home" target="_blank" rel="noopener noreferrer" variant="outlined">View Live</Button>
+                    </CardActions>
+                </Card>
+                <Card sx={{textAlign:"center", width:{sm:'120px', lg:'440px'}, height:{sm:'120px',lg:'500px'},borderRadius:'10px', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                    <CardMedia sx={{ height: 240, width: 440, objectFit: "cover"}} image="/public/images/todo.png" />
+                    <CardContent>
+                        <Typography>
+                           Todo App
+                        </Typography>
+                        <Typography>
+                            Technologies Used: React.js, Node.js, Express.js, MongoDB, MUI
+                            Built a MERN stack todo application with user authentication, allowing users to create, read, update, and delete tasks with a responsive UI.
+                        </Typography>
+                    </CardContent>
+                    <CardActions sx={{justifyContent:'center', gap:2}}>
+                        <Button size="small" href="https://github.com/HariGanesh-UI/React-Typescript-to-do-app" target="_blank" rel="noopener noreferrer" variant="contained">View Project Repo</Button>
+                        <Button size="small" href="#home" target="_blank" rel="noopener noreferrer" variant="outlined">View Live</Button>
+                    </CardActions>
+                </Card>
             </div>
         </section>
     )

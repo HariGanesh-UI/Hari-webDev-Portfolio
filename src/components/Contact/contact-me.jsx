@@ -1,47 +1,12 @@
-import { Box, TextField, TextareaAutosize, Button } from '@mui/material';
-import { useForm } from 'react-hook-form';
 
-export function Contact() {
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors }, 
-    reset 
-  } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
-  };
-
-  return (
-    <section id="contact">
-        <Box sx={{ p:2, boxShadow:3, borderRadius: 2, maxWidth: 650,margin:'auto',justifyContent:'center',alignContent:'center'}} >
-      <div className="text-center">
-        <h2 className="title3">Get in Touch</h2>
-        <p>
-          I'm currently open to new opportunities and collaborations. 
-          Feel free to send me a message!
-        </p>
-      </div>
-
-      <div className="container">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <TextField fullWidth label="Name" variant="outlined" margin="normal" {...register('name', { required: 'Name is required' })} error={!!errors.name} helperText={errors.name?.message}/>
-
-          <TextField fullWidth label="Email" variant="outlined" margin="normal" type="email" {...register('email', { required: 'Email is required', pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email format',},})}error={!!errors.email}helperText={errors.email?.message}/>
-
-          <TextareaAutosize aria-label="Send Message" minRows={10} placeholder="Send Message" style={{ width: 580 }} {...register('message', { required: 'Message is required' })}/>
-          {errors.message && (
-            <p style={{ color: 'red' }}>{errors.message.message}</p>
-          )}
-
-          <Button className="btn btn-primary mt-3" type="submit" variant="contained" color="primary">
-            Send Message
-          </Button>
-        </form>
-      </div>
-    </Box>
-    </section>
-  );
+export function Contact(){
+    return(
+        <section id="contact" className="text-center p-4">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            <a href="mailto:kolahariganesh.5@gmail.com " className="btn btn-primary m-2 p-2">Email Me</a>
+            <a href="https://www.linkedin.com/in/kola-hari-ganesh" target="_blank" rel="noopener noreferrer" className="btn btn-secondary m-2 p-2">LinkedIn</a>
+        </section>  
+    )
 }

@@ -1,57 +1,19 @@
-#icon{
-    height: 60px;
-    width: 60px;
-}
-.title1{
-    font-family:'Roboto', sans-serif ;
-    font-weight: bold;
+#head1{
     text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
 }
-.tech-stack-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.slide-track {
-  display: flex;
-  gap: 10px;
-  flex-wrap: nowrap;
-  width: max-content;
-  animation: scroll 40s linear infinite;
+.tech{
+    display: flex;
+    justify-content: center;
+    gap: 2;
 }
 
-/* On very small screens, stop the auto-scroll and allow horizontal swipe */
-@media (max-width: 320px) {
-  .tech-stack-slider {
-    overflow-x: auto;
-  }
-  .slide-track {
-    animation: none;
-  }
-  .tech-card {
-    flex: 0 0 auto;
-    min-width: 120px;
-  }
-}
-
-.tech-card {
-  flex: 0 0 auto;          
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
-}
-
-.tech-card:hover {
-  transform: scale(1.15);              
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
-  z-index: 2;                           
-}
-.tech-label {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 8px;
-    font-weight: 500;
+@media (max-width:768) {
+    .tech{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
 }

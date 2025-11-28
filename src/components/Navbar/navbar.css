@@ -1,95 +1,53 @@
-#nav {
-  background-color: #101921;
-  color: aliceblue;
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  cursor: pointer;
-  flex-wrap: wrap;
-  padding: 1rem;
-  text-align: center;
+header {
+  background-color: #f6f7f8;
+  display: flex;                  
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 0.5rem 1rem;
 }
 
-.nav-link{
+
+nav > a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
+  margin: 0 10px;
+  color: #000;
+  font-weight: 600;
 }
 
-.nav-link:hover {
-  color: #00bfff;
+nav {
+  display: flex;
+  align-items: center;
 }
 
-.resume-link {
-  text-decoration: none;
-  color: inherit;
-}
 
-.resume-link:hover {
-  text-decoration: underline;
-  color: #007bff;
-}
-
-@media (max-width: 768px) {
-  nav {
-    display: inline;
-  }
-
-  .resume-link {
-    margin-top: 1rem;
-  }
-}
-.homeprofile{
-    width: 350px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 1.5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-header{
-  box-shadow: 0px 8px 3px #2f2f2f;
-}
-
-/* Avatar sizing and link spacing */
-#nav .MuiAvatar-root {
-  width: 44px;
-  height: 44px;
-}
-
-.nav-link {
-  font-size: 0.95rem;
-}
-
-@media (max-width: 768px) {
-  #nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  #nav .MuiAvatar-root {
-    width: 36px;
-    height: 36px;
-  }
-
-  .nav-link {
-    margin: 0.25rem 0.25rem;
-    font-size: 0.9rem;
-  }
-
-  .resume-link {
-    margin-top: 0.5rem;
-  }
-}
-#nav {
+.sticky {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0px 0px 10px 0px grey;
 }
 
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;       
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    flex-wrap: wrap;             
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  nav > a {
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .sticky {
+    padding: 0.5rem;
+  }
+}
