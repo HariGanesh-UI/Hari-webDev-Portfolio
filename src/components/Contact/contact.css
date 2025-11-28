@@ -1,0 +1,40 @@
+/* Section background + spacing */
+.contact-section {
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Title */
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.contact-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Actions (buttons) */
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-actions button {
+    width: 100%;
+    max-width: 250px;
+  }
+}

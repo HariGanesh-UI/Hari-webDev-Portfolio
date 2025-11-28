@@ -31,8 +31,15 @@ export function Techstack() {
                 sx={{ height: 80, width: 80, objectFit: "contain", mx: "auto" }}
               />
               <CardContent>
-                <Typography variant="body2">{item.name}</Typography>
-                <LinearProgress variant="determinate"  value={item.value} color="success" sx={{ mt: 1 }}/>
+                <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                  {item.name}
+                </Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={item.value}
+                  color="success"
+                  sx={{ mt: 1 }}
+                />
               </CardContent>
             </Card>
           </Grid>

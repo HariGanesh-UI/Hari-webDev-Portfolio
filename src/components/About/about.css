@@ -1,51 +1,76 @@
+/* Section background */
+#about {
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+/* Title */
+.about-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+/* Container */
 .about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  height: 100vh;
-}
-#about{
-  background-color: cyramical;
-  box-shadow: 0px 0px 10px grey;
-  border-radius: 2;
-  margin: 3rem;
-  padding: 0.5rem;
+  gap: 1.5rem;
 }
 
-.about-container img {
-  margin-bottom: 1rem;
+/* Image */
+.about-img {
+  height: 250px;
+  width: 250px;
   border-radius: 4%;
   box-shadow: 0px 0px 10px 0px grey;
 }
 
-.about-container div {
-  max-width: 600px; 
+/* Text */
+.about-text {
+  max-width: 600px;
   text-align: center;
 }
 
-#para {
+.para {
   margin-bottom: 1rem;
   line-height: 1.9;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-
-}
-.about{
-    font-size: 2rem;
-    font-weight: bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Contact section */
+.about-contact {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.about-contact h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive layout */
 @media (min-width: 768px) {
   .about-container {
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
   }
 
-  .about-container img {
+  .about-img {
     margin-right: 2rem;
-    margin-bottom: 0;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+
+  .about-contact {
+    text-align: left;
   }
 }

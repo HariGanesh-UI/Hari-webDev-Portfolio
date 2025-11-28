@@ -1,19 +1,22 @@
-#head1{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bolder;
-    margin-bottom: 2rem;
-}
-.tech{
-    display: flex;
-    justify-content: center;
-    gap: 2;
+#head1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
 }
 
-@media (max-width:768) {
-    .tech{
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Wrapper for tech stack */
+.tech {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* gap must be in valid units */
+  flex-wrap: wrap; /* allow wrapping by default */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech {
+    flex-direction: column;
+    align-items: center;
+  }
 }
